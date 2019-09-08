@@ -1,0 +1,60 @@
+// @font-face {
+//   font-family: 'Open Sans', sans-serif;
+//   src : url('fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype')
+// }
+
+@font-face {
+    font-family: 'montserrat_bold';
+    src: url('../fonts/Montserrat/montserratalternates-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/Montserrat/montserratalternates-semibold-webfont.woff') format('woff'),
+         url('../fonts/Montserrat/montserratalternates-semibold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserrat_medium';
+    src:url('../fonts/Montserrat/montserratalternates-medium-webfont.woff2') format('woff2'),
+        url('../fonts/Montserrat/montserratalternates-medium-webfont.woff') format('woff'),
+        url('../fonts/Montserrat/montserratalternates-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+//--------------------------------------------------------------------------
+
+h1{
+  font-weight : 600;
+  font-size : 35px;
+  letter-spacing: -0.02em;
+  font-family: 'montserrat_bold';
+  @include tablet {
+    font-weight : 400;
+    font-size : 49px;
+  }
+}
+
+h2{
+  font-weight : bold;
+  font-size : 42px;
+  letter-spacing: -0.03em;
+  font-weight : 600;
+
+}
+
+h3{
+  font-weight : bold;
+  font-size : 24px;
+  letter-spacing: -0.03em;
+  font-weight : 600;
+
+}
+
+p{
+  font-weight : 400;
+  font-size : 13px;
+  line-height : 18px;
+  letter-spacing: -0.02em;
+}

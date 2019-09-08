@@ -1,0 +1,50 @@
+html, body { height: 100% }
+body {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  // background:$white;
+  // font-family: $font-1, sans-serif;
+}
+
+/*  _app.css */
+//##{$bodyFormId},
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box !important;
+  -webkit-box-sizing:border-box !important;
+  -moz-box-sizing:border-box !important;
+  -webkit-font-smoothing:antialiased;
+  -moz-font-smoothing:antialiased;
+  -o-font-smoothing:antialiased;
+  font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+//------------------------------------------------------------------------------
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container{
+  width: 100%;
+
+  @include tablet {
+    width: 740px;
+  }
+
+  @include desktop {
+    width: 970px;
+  }
+}
+
+.row {
+  //width: 100%;
+  //overflow: hidden;
+}
+
+

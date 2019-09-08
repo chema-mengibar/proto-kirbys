@@ -1,0 +1,5 @@
+node_modules
+.cache
+.vs
+_docs
+_help

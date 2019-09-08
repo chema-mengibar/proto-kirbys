@@ -1,0 +1,18 @@
+doctype html
+html( lang= INDEX.lang )
+  head
+    meta(charset= INDEX.charset)
+    meta(http-equiv='X-UA-Compatible',content='IE=edge' )
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+    meta(name='description', content= INDEX.description )
+    meta(name='author', content= INDEX.author)
+    title= INDEX.pageTitle
+    link(href= 'css/font-awesome.css', rel='stylesheet')
+    link(href= 'css/bootstrap.css', rel='stylesheet')
+    link(href= 'css/main.css', rel='stylesheet')
+    link(href= 'css/project.css', rel='stylesheet')
+    block head
+  body
+    block content
+    script(src='js/vendor.js')
+    block customScript
