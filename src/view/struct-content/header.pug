@@ -1,0 +1,22 @@
+include ../struct-layout/grid
+
+mixin header
+  div.header
+    div.header__bg-image
+      picture
+        source(media='(min-width: 992px)' srcset=HEADER.bgImage.big )
+        source(media='(min-width: 576px) and (max-width: 991px)' srcset=HEADER.bgImage.medium )
+        source(media='(max-width: 575px)' srcset=HEADER.bgImage.small )
+        img(alt='header-image-alt-text')
+    div.content-wrapper
+      +container
+        +grid
+          +col
+            div.nav
+              div.nav__logo
+              ul
+                li Home
+                li About Me
+                li Contact
+
+    block

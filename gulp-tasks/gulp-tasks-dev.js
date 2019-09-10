@@ -15,6 +15,7 @@ var uncache = require('gulp-uncache');
 var concat = require('gulp-concat');
 var fs = require('fs');
 var pkg = require('../package.json');
+var combine = require('gulp-scss-combine');
 
 // #######################################################################################  TASKS
 
@@ -71,7 +72,7 @@ function buildFile( filePrefix ){
     data:  JSON.parse(fs.readFileSync('./src/view/temp/temp-data.json')),
     pretty: true
   }))
-  .pipe( rename( filePrefix + '.php' ) )
+  .pipe( rename( filePrefix + '.html' ) )
   .pipe( gulp.dest( 'dist-pages' ) );
 }
 
@@ -98,7 +99,15 @@ gulp.task('scss:build', function () {
     .pipe( sass( {outputStyle: 'compressed'} ).on( 'error', sass.logError ) )
     .pipe( stripCssComments( ) )
     .pipe( rename( "index.css" ) )
-    .pipe( gulp.dest( './dist/assets/css' ) );
+    .pipe( gulp.dest( './dist-pages/assets/css' ) );
+
+  gulp.src('./src/view/**/*.scss')
+    .pipe( sass( {outputStyle: 'compressed'} ).on( 'error', sass.logError ) )
+    .pipe( stripCssComments( ) )
+    .pipe(combine())
+    .pipe(concat('view.scss'))
+    .pipe( rename( "view.css" ) )
+    .pipe( gulp.dest( './dist-pages/assets/css' ) );
 
 });
 

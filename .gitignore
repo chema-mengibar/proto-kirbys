@@ -3,3 +3,4 @@ node_modules
 .vs
 _docs
 _help
+dist

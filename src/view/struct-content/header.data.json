@@ -1,0 +1,9 @@
+{
+  "HEADER": {
+    "bgImage":{
+      "big":"./assets/images/header/bg__format-2880x1620.jpg",
+      "medium":"./assets/images/header/bg__format-1152x640.jpg",
+      "small":"./assets/images/header/bg__format-863x480.jpg"
+    }
+  }
+}

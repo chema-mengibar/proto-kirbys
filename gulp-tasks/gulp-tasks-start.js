@@ -23,7 +23,7 @@ var pkg = require('../package.json');
 gulp.task( 'assets:move', function( ){
 
   gulp.src([ './src/assets/images/**/*' ])
-    .pipe( gulp.dest( 'dist/assets/img' ) );
+    .pipe( gulp.dest( 'dist-pages/assets/images' ) );
 
   // gulp.src([
   //   'node_modules/bootstrap-sass/assets/fonts/**/*',

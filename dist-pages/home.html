@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="Motuo">
+    <title>Hello World</title>
+    <link href="assets/css/index.css" rel="stylesheet">
+    <link href="assets/css/view.css" rel="stylesheet">
+    <!-- Nothing to append-->
+  </head>
+  <body>
+    <div class="container full">
+      <div class="flex-grid">
+        <div class="col">
+          <div class="header">
+            <div class="header__bg-image">
+              <picture>
+                <source media="(min-width: 992px)" srcset="./assets/images/header/bg__format-2880x1620.jpg"/>
+                <source media="(min-width: 576px) and (max-width: 991px)" srcset="./assets/images/header/bg__format-1152x640.jpg"/>
+                <source media="(max-width: 575px)" srcset="./assets/images/header/bg__format-863x480.jpg"/><img alt="header-image-alt-text"/>
+              </picture>
+            </div>
+            <div class="content-wrapper">
+              <div class="container">
+                <div class="flex-grid">
+                  <div class="col">
+                    <div class="nav">
+                      <div class="nav__logo"></div>
+                      <ul>
+                        <li>Home</li>
+                        <li>About Me</li>
+                        <li>Contact</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-grid w1-2">
+        <div class="col">
+          <div class="home">
+            <p>Guten Tag tu</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47226367-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'UA-47226367-6');
+    </script>
+  </body>
+</html>

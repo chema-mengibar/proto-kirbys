@@ -16,6 +16,7 @@
     "gulp-pug": "~3.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
+    "gulp-scss-combine": "^1.0.0",
     "gulp-strip-comments": "~2.4.5",
     "gulp-strip-css-comments": "~1.2.0",
     "gulp-uncache": "~0.4.0-beta1",

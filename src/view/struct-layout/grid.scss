@@ -1,0 +1,57 @@
+@import "../../scss/mediaqueries";
+
+.container{
+  margin:0 auto;
+  max-width:553px;
+
+  @include tablet {
+    max-width:768px;
+  }
+
+  @include desktop {
+    max-width:1024px;
+  }
+
+
+  &.full{
+    width: 100%;
+    max-width:none;
+  }
+}
+
+.flex-grid {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 400px) {
+    flex-direction:column;
+  }
+
+  &.w2-1{
+    .col{
+      &:nth-child(1){
+        min-width:70%
+      }
+    }
+  }
+
+  &.w1-2{
+    .col{
+      &:nth-child(2){
+        min-width:70%
+      }
+    }
+  }
+
+  .col {
+    flex: 1;
+
+    @media (max-width: 400px) {
+      &{
+        width: 100%;
+      }
+    }
+  }
+  
+}
+

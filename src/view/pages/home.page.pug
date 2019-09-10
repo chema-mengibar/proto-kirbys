@@ -1,11 +1,23 @@
 extends ../index
+include ../struct-layout/grid
+include ../struct-content/header
 
 block append head
   // Nothing to append
 
 block content
-  div.home
-    p #{HOME.salutation}
+  +container-full
+    +grid
+      +col
+        +header
+
+
+    +grid-space
+      +col
+        div.home
+          p #{HOME.salutation} tu
+
+
   
 
 block customScript

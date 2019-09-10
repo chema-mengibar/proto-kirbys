@@ -17,7 +17,7 @@ env = 'development';
 gulp.task('browserSync', function() {
     browserSync.init({
         server: {
-            baseDir: './dist/' + pkg.custom.projectFolder
+            baseDir: './dist-pages'
         }
     }),
     browserSync.reload({})
@@ -46,15 +46,17 @@ gulp.task( 'base', [ 'assets:move', 'kirbys:move', 'scss:build' ] );  //, 'build
 *
 * Call the functions and add the "watch" and "reload" events
 */
-gulp.task( 'dev', [  "pug:build" , 'scss:build' , "browserSync" ], function( ) {
+gulp.task( 'dev', [  "pug:build" , 'scss:build' , 'assets:move', 'browserSync'], function( ) {
 
-    gulp.watch( './src/views/**/*', ['pug:build'] );
-    gulp.watch( './src/scss/**/*.scss', ['scss:build'] );
+    gulp.watch([ './src/view/**/*.pug',  './src/view/**/*.json'], ['pug:build'] );
+    gulp.watch(['./src/scss/**/*.scss', './src/view/**/*.scss'], ['scss:build'] );
+
+    gulp.watch(['./src/assets/images/**/*'], ['assets:move'] );
 
 //   gulp.watch( './source/js/**/*.js', ['dynamicJs'] );
 
     /* Reloads the browser whenever HTML or JS files change */
-    gulp.watch( 'dist-pages/**/*', browserSync.reload );
+    gulp.watch( './dist-pages/**/*', browserSync.reload );
 
 
 });
