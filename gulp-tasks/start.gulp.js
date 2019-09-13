@@ -31,11 +31,13 @@ gulp.task( 'assets:move', function( ){
   // ])
   //   .pipe( gulp.dest('dist/' + pkg.custom.projectFolder +'fonts' ) );
 
-  // gulp.src([
-  //   './src/fonts/Montserrat/**/*',
-  //   '!./src/fonts/Montserrat/**/*.css',
-  // ])
-  //   .pipe( gulp.dest('dist/' + pkg.custom.projectFolder +'fonts/Montserrat' ) );
+  gulp.src([
+    './src/assets/fonts/Cormorant_Garamond/**/*',
+  ]).pipe( gulp.dest('dist-pages/assets/fonts/Cormorant_Garamond' ) );
+
+  gulp.src([
+    './src/assets/fonts/OpenSans/**/*',
+  ]).pipe( gulp.dest('dist-pages/assets/fonts/OpenSans' ) );
 
 
   // gulp.src([

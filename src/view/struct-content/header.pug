@@ -8,6 +8,9 @@ mixin header
         source(media='(min-width: 576px) and (max-width: 991px)' srcset=HEADER.bgImage.medium )
         source(media='(max-width: 575px)' srcset=HEADER.bgImage.small )
         img(alt='header-image-alt-text')
+      div.header__slogan 
+        div.header__headline #{HEADER.headline}
+        div.header__sub-headline #{HEADER.subHeadline}
     div.content-wrapper
       +container
         +grid
@@ -15,8 +18,7 @@ mixin header
             div.nav
               div.nav__logo
               ul
-                li Home
-                li About Me
-                li Contact
-
+                each val, index in HEADER.nav
+                  li
+                    a(href='#')=val
     block

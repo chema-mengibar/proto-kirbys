@@ -8,11 +8,32 @@
 
 .header__bg-image{
 
+  height:auto;
+  overflow:hidden;
+
   img{
     height: auto;
     width: 100%;
     object-fit: cover;
     max-width: 100%;
+  }
+
+  .header__slogan{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color:white;
+    font-family: 'Deco';
+
+    .header__headline{
+      font-size: 60px;
+    }
+
+    .header__sub-headline{
+      font-size: 30px;
+    }
   }
 }
 
@@ -29,32 +50,59 @@
   display:block;
   height:100px;
   width: 100%;
-  background-color: rgba(255,255,255, .5);
+  border-bottom: 1px solid rgba(255,255,255, .5);
 
   .nav__logo{
     width:100px;
     height:100%;
     float:left;
-    background-color: rgba(36, 36, 36, 0.61);
     margin-right:20px;
+    background-image: url('../images/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    float:left;
   }
 
   ul{
     display:block;
-    width:100%;
+    float:right;
     height:100%;
     list-style-type: none;
     margin:0;
-    padding:0;
+    padding:0;    
   }
 
   li{
     display:inline-block;
     height:100%;
-    line-height:100px;
+    line-height:50px;
+    padding:20px;
+    cursor:pointer;
+    margin:0;
+
+    -moz-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
     
     &:not(:last-child){
-      margin-right:20px;
+      margin-right:0px;
+    }
+
+    &:hover{
+      background-color:rgba(0,0,0,.3);
+      
+    }
+
+    a{
+      &:link, &:visited, &:active{
+        color:white;
+        text-decoration:none;
+      }
+
+      &:hover{
+       
+      }
     }
   }
 }

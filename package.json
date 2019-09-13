@@ -36,7 +36,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "dev": "gulp dev",
-    "base": "gulp base",
+    "start": "gulp base",
     "kirbys:move": "gulp kirbys:move"
   },
   "custom": {}
