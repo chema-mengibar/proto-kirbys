@@ -15,13 +15,16 @@
 		"bgImage": {
 			"big": "./assets/images/header/bg__format-2880x1620.jpg",
 			"medium": "./assets/images/header/bg__format-1152x640.jpg",
-			"small": "./assets/images/header/bg__format-863x480.jpg"
+			"small": "./assets/images/header/bg__format-863x863.jpg"
 		},
-		"headline": "Lorem ipsum temporavit",
-		"subHeadline": "desidera meteoras",
+		"headline": "Pferde verleihen uns die Flügel, die uns fehlen.",
+		"subHeadline": "Pam Brown",
 		"nav": [
 			"Home",
-			"About Me",
+			"About Me 1",
+			"About Me 2",
+			"About Me 3",
+			"About Me 4",
 			"Contact"
 		]
 	}

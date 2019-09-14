@@ -2,23 +2,38 @@ include ../struct-layout/grid
 
 mixin header
   div.header
-    div.header__bg-image
+    div.header__bg-image-wrapper
       picture
         source(media='(min-width: 992px)' srcset=HEADER.bgImage.big )
         source(media='(min-width: 576px) and (max-width: 991px)' srcset=HEADER.bgImage.medium )
         source(media='(max-width: 575px)' srcset=HEADER.bgImage.small )
         img(alt='header-image-alt-text')
-      div.header__slogan 
+      div.header__slogan-wrapper 
         div.header__headline #{HEADER.headline}
         div.header__sub-headline #{HEADER.subHeadline}
-    div.content-wrapper
+    div
       +container
-        +grid
+        +row
           +col
             div.nav
               div.nav__logo
-              ul
+              div#nav-trigger.nav__burger
+                div.burger-icon
+                  span
+                  span
+                  span
+                  span
+                  span
+                  span
+              ul.nav__ul-desktop
                 each val, index in HEADER.nav
                   li
                     a(href='#')=val
+  div.nav-mobile-wrapper#nav
+    ul.nav__ul-mobile
+      each val, index in HEADER.nav
+        li
+          a.nav__link(href='#')=val
+              
+  
     block
