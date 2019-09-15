@@ -19,9 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('resize', debounce(() => {
   console.log('breakpoint is: ', getBreakpoint(window.innerWidth));
-
-
-
 }, 250));
+
+
+/*
+// Scroll avoid
+https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
+ */
 
 

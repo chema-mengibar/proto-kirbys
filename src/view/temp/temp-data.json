@@ -11,13 +11,6 @@
 	"HOME": {
 		"salutation": "Guten Tag"
 	},
-	"BOX_TEASER": {
-		"imgSrc": "./assets/images/placeholders/ph_864x864.jpg",
-		"headline": "Teaser",
-		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi urna orci, ultrices et porta ac, lacinia vitae nisl. Vestibulum sit amet lorem vulputate, cursus orci in, condimentum sapien. Duis placerat risus quis urna facilisis, vel cursus purus porta. Nam luctus lorem elit, quis placerat neque porta porttitor.",
-		"link": "Mehr infos",
-		"linkHref": "#"
-	},
 	"BOX_3": [
 		{
 			"imgSrc": "./assets/images/placeholders/ph_864x486.jpg",
@@ -41,6 +34,34 @@
 			"linkHref": "#"
 		}
 	],
+	"BOX_TEASER": {
+		"imgSrc": "./assets/images/placeholders/ph_864x864.jpg",
+		"headline": "Teaser",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi urna orci, ultrices et porta ac, lacinia vitae nisl. Vestibulum sit amet lorem vulputate, cursus orci in, condimentum sapien. Duis placerat risus quis urna facilisis, vel cursus purus porta. Nam luctus lorem elit, quis placerat neque porta porttitor.",
+		"link": "Mehr infos",
+		"linkHref": "#"
+	},
+	"FOOTER": {
+		"test": "I´m the footer",
+		"social": [
+			{
+				"name": "",
+				"icon": "",
+				"link": ""
+			},
+			{
+				"name": "",
+				"icon": "",
+				"link": ""
+			}
+		],
+		"links": [
+			{
+				"label": "",
+				"href": ""
+			}
+		]
+	},
 	"HEADER": {
 		"bgImage": {
 			"big": "./assets/images/placeholders/ph_2880x1620.jpg",

@@ -1,0 +1,21 @@
+@import "../../../scss/shadows.mixins";
+@import "../../../scss/mediaqueries";
+
+.footer{
+  width:100%;
+  min-height: 100px;
+  padding: 10px;
+  background-color:rgb(53, 53, 53);
+  color:white;
+
+  @include tablet {
+   
+  }
+}
+
+.footer__content-wrapper{
+ 
+  @include tablet {
+
+  }
+}

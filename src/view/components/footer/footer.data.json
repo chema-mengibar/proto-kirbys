@@ -1,0 +1,23 @@
+{
+  "FOOTER":    {
+    "test":"I´m the footer",
+    "social":[
+      {
+        "name":"",
+        "icon":"",
+        "link":""
+      },
+      {
+        "name":"",
+        "icon":"",
+        "link":""
+      }
+    ],
+    "links":[
+      {
+        "label":"",
+        "href":""
+      }
+  ]
+  }
+}

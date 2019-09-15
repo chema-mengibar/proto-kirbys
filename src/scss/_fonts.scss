@@ -14,6 +14,7 @@ h1{
   font-weight : 600;
   font-size : 35px;
   letter-spacing: -0.02em;
+  margin-bottom:20px;
   font-family: 'Deco';
   @include tablet {
     font-weight : 400;
@@ -22,11 +23,15 @@ h1{
 }
 
 h2{
-  font-weight : bold;
-  font-size : 42px;
-  letter-spacing: -0.03em;
-  font-weight : 600;
-
+  font-weight : 400;
+  font-size : 20px;
+  letter-spacing: -0.02em;
+  margin-bottom:20px;
+  font-family: 'Deco';
+  @include tablet {
+    font-weight : 400;
+    font-size : 35px;
+  }
 }
 
 h3{
@@ -43,9 +48,24 @@ p{
   line-height : 18px;
   letter-spacing: -0.02em;
   font-family: 'Text';
+
+
 }
+
 
 body{
   font-family: 'Text';
   font-size:14px;
+}
+
+a{
+  display:block;
+  padding:10px;
+  &:link, &:visited, &:active{
+    color:rgb(107, 107, 107); 
+  }
+
+  &:hover{
+    
+  }
 }

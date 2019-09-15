@@ -68,6 +68,16 @@
         width: 100%;
       }
     }
+
+    &.col--space-sides{
+      padding:20px;
+    }
+
+    &.col--slogan{
+      text-align: center;
+      padding-left:80px;
+      padding-right:100px;
+    }
   }
   
 }

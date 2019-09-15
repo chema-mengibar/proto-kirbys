@@ -28,5 +28,13 @@ mixin row-with-sidebar-reverse
     block
 
 mixin col
-  div.col
+  div.col(class!=attributes.class)
+    block
+
+mixin col_space
+  +col( class='col--space-sides' )
+    block
+
+mixin col_slogan
+  +col( class='col--space-sides col--slogan' )
     block
