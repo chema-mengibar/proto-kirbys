@@ -1,9 +1,9 @@
 {
   "HEADER": {
     "bgImage":{
-      "big":"./assets/images/header/bg__format-2880x1620.jpg",
-      "medium":"./assets/images/header/bg__format-1152x640.jpg",
-      "small":"./assets/images/header/bg__format-863x863.jpg"
+      "big":"./assets/images/placeholders/ph_2880x1620.jpg",
+      "medium":"./assets/images/placeholders/ph_1152x640.jpg",
+      "small":"./assets/images/placeholders/ph_864x864.jpg"
     },
     "headline":"Pferde verleihen uns die Flügel, die uns fehlen.",
     "subHeadline":"Pam Brown",
@@ -11,8 +11,6 @@
       "Home",
       "About Me 1",
       "About Me 2",
-      "About Me 3",
-      "About Me 4",
       "Contact"
     ]
   }

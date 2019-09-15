@@ -1,6 +1,8 @@
 extends ../index
-include ../struct-layout/grid
-include ../struct-content/header
+include ../components/grid/grid
+include ../components/header/header
+include ../components/box-3/box-3
+include ../components/box-teaser/box-teaser
 
 block append head
   // Nothing to append
@@ -13,10 +15,15 @@ block content
         +header
   <!-- Content -->
   +container
-    +row
+    +row_space-all
+      +box-3( BOX_3[0] )
+      +box-3( BOX_3[1] )
+      +box-3( BOX_3[2] )
+  <!-- Teaser -->
+  +container
+    +row_space-top
       +col
-        div.home
-          p #{HOME.salutation}
+        +box-teaser( BOX_TEASER )
 
 
   

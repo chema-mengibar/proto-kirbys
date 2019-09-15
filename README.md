@@ -1,5 +1,17 @@
 
 
+# Images
+
+https://www.webmalama.com/the-best-full-screen-background-image-sizes-for-web-design/
+
+## Logo:
+Path: {ROOT}\src\assets\images\
+
+## Placeholders:
+Path: {ROOT}\src\assets\images\placeholders
+
+
+
 
 # Kirbi
 

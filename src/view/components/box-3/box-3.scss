@@ -1,0 +1,58 @@
+@import "../../../scss/shadows.mixins";
+@import "../../../scss/mediaqueries";
+
+.box-3{
+  width:100%;
+  min-width: 100%;
+  margin-bottom:20px;
+
+  @include shadow( 0px 3px 20px -3px #0000006b );
+
+  &:not(:last-child){
+    margin-right:20px;
+  }
+
+  @include tablet {
+    min-width: 32%;
+    width:32%;
+    margin-bottom:0;
+
+    
+  }
+  
+}
+
+.box-3__image-wrapper{
+  height: 150px;
+  width:100%;
+  overflow:hidden;
+}
+
+.box-3__img{
+  width:100%;
+  height:auto;
+  // margin: 0 -20px 0 0;
+  // margin-left: -30px;
+}
+
+.box-3__content{
+  position:relative;
+  height:150px;
+  background-color:white;
+  width:100%;
+  font-family: 'Deco';
+  text-align: center;
+  padding:40px 15px 10px;
+}
+
+.box-3__link{
+  position:absolute;
+  color:grey;
+  font-family: 'Text';
+  text-align: center;
+  font-size:12px;
+  bottom:0;
+  right: 0;
+  padding: inherit;
+
+}

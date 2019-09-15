@@ -1,0 +1,9 @@
+mixin box-teaser( obj )
+  div.box-teaser( style='background-image: url(' + obj.imgSrc + ')')
+    div.box-teaser__image-wrapper( style='background-image: url(' + obj.imgSrc + ')')
+    div.box-teaser__content-wrapper
+      div.box-teaser__content
+        div.box-teaser__headline=obj.headline
+        div.box-teaser__description=obj.text
+        div.box-teaser__link
+          a(href=obj.linkHref)=obj.link

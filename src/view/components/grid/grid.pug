@@ -7,8 +7,17 @@ mixin container-full
     block
 
 mixin row
-  div.flex-grid
+  div.flex-grid(class!=attributes.class)
     block
+
+mixin row_space-all
+  +row( class='flex-grid--padding-top flex-grid--padding-sides' )
+    block
+
+mixin row_space-top
+  +row( class='flex-grid--padding-top' )
+    block
+
 
 mixin row-with-sidebarW
   div.flex-grid.w1-2

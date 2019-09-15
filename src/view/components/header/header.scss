@@ -1,6 +1,6 @@
-@import "../../scss/mediaqueries";
-@import "../../scss/animations.mixins";
-@import "./nav-burger";
+@import "../../../scss/mediaqueries";
+@import "../../../scss/animations.mixins";
+@import "./header-burger.partial";
 
 .header{
   display:block;
@@ -146,9 +146,11 @@ $menu-item_height--tablet: 100px;
   display: block;
   position: absolute;
   width: 100%;
+  min-height:100%;
   top: 100px;
   right: 100%;
-
+  background-color:white;
+  z-index: 1000;
   &.open{
     right: 0%;
   }

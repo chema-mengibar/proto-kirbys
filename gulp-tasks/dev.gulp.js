@@ -101,7 +101,7 @@ gulp.task('scss:build', function () {
     .pipe( rename( "index.css" ) )
     .pipe( gulp.dest( './dist-pages/assets/css' ) );
 
-  gulp.src('./src/view/**/*.scss')
+  gulp.src(['./src/view/**/*.scss','!./src/view/**/*.partial.scss'])
     .pipe( sass( {outputStyle: 'compressed'} ).on( 'error', sass.logError ) )
     .pipe( stripCssComments( ) )
     .pipe(combine())

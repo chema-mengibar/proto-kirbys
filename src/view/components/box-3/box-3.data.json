@@ -1,0 +1,25 @@
+{
+  "BOX_3":[
+    {
+      "imgSrc":"./assets/images/placeholders/ph_864x486.jpg",
+      "headline":"",
+      "text":"Lorem ipsum temporavit desidera meteora.",
+      "link":"Mehr infos",
+      "linkHref":"#"
+    },
+    {
+      "imgSrc":"./assets/images/placeholders/ph_864x486.jpg",
+      "headline":"",
+      "text":"Lorem ipsum temporavit desidera meteora.",
+      "link":"Mehr infos",
+      "linkHref":"#"
+    },
+    {
+      "imgSrc":"./assets/images/placeholders/ph_864x486.jpg",
+      "headline":"",
+      "text":"Lorem ipsum temporavit desidera meteora.",
+      "link":"Mehr infos",
+      "linkHref":"#"
+    }
+  ]
+}
