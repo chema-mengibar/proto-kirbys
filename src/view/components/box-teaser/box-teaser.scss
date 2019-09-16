@@ -46,7 +46,7 @@
   justify-content: center;
   -webkit-justify-content: center;
   flex-direction: column;
-  padding:0 40px;
+  padding:0 20px;
 
   @include tablet {
     width:50%;
@@ -58,7 +58,8 @@
   font-family: 'Text';
   text-align: center;
   background-color:white;
-  padding: 40px;
+  padding: 20px;
+  margin-top: 20px;
 }
 
 .box-teaser__headline{

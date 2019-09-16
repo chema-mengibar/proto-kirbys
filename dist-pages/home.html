@@ -2,7 +2,7 @@
 <html lang="de-DE">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="Motuo">
@@ -11,22 +11,31 @@
     <link href="assets/css/view.css" rel="stylesheet">
     <!-- Nothing to append-->
   </head>
-  <body><!-- Header -->
+  <body><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!-- Facebook-->
+  <symbol id="icon-facebook" viewBox="0 0 49.652 49.652">
+    <path d="M24.826,0C11.137,0,0,11.137,0,24.826c0,13.688,11.137,24.826,24.826,24.826c13.688,0,24.826-11.138,24.826-24.826
+        C49.652,11.137,38.516,0,24.826,0z M31,25.7h-4.039c0,6.453,0,14.396,0,14.396h-5.985c0,0,0-7.866,0-14.396h-2.845v-5.088h2.845
+        v-3.291c0-2.357,1.12-6.04,6.04-6.04l4.435,0.017v4.939c0,0-2.695,0-3.219,0c-0.524,0-1.269,0.262-1.269,1.386v2.99h4.56L31,25.7z
+        "/>
+  </symbol>
+
+
+</svg><!-- Header -->
     <div class="container full">
       <div class="flex-grid">
         <div class="col">
           <div class="header">
-            <div class="header__bg-image-wrapper">
-              <picture>
-                <source media="(min-width: 992px)" srcset="./assets/images/placeholders/ph_2880x1620.jpg"/>
-                <source media="(min-width: 576px) and (max-width: 991px)" srcset="./assets/images/placeholders/ph_1152x640.jpg"/>
-                <source media="(max-width: 575px)" srcset="./assets/images/placeholders/ph_864x864.jpg"/><img alt="header-image-alt-text"/>
-              </picture>
+            <picture>
+              <source media="(min-width: 992px)" srcset="./assets/images/placeholders/ph_2880x1620.jpg"/>
+              <source media="(min-width: 576px) and (max-width: 991px)" srcset="./assets/images/placeholders/ph_1152x640.jpg"/>
+              <source media="(max-width: 575px)" srcset="./assets/images/placeholders/ph_864x1536.jpg"/><img class="header__bg-image-wrapper"/>
               <div class="header__slogan-wrapper"> 
                 <div class="header__headline">Pferde verleihen uns die Flügel, die uns fehlen.</div>
                 <div class="header__sub-headline">Pam Brown</div>
               </div>
-            </div>
+            </picture>
             <div>
               <div class="container">
                 <div class="flex-grid">
@@ -60,7 +69,7 @@
       </div>
     </div><!-- Content -->
     <div class="container"><!-- Page-Content -->
-      <div class="flex-grid flex-grid--padding-top flex-grid--padding-sides">
+      <div class="flex-grid flex-grid--padding-top">
         <div class="col col--space-sides">
           <h1> Home</h1>
           <p> </p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
@@ -72,7 +81,7 @@
           <p> </p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
         </div>
       </div><!-- Link Boxes -->
-      <div class="flex-grid flex-grid--padding-top flex-grid--padding-sides">
+      <div class="flex-grid flex-grid--padding-top">
         <div class="box-3">
           <div class="box-3__image-wrapper"><img class="box-3__img" src="./assets/images/placeholders/ph_864x486.jpg"/></div>
           <div class="box-3__content">
@@ -95,7 +104,7 @@
           </div>
         </div>
       </div><!-- Slogan -->
-      <div class="flex-grid flex-grid--padding-top flex-grid--padding-sides">
+      <div class="flex-grid flex-grid--padding-top">
         <div class="col col--space-sides col--slogan">
           <h2> Lorem ipsum temporavit</h2>
           <p> </p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?<a href="#">Mehr infos</a>
@@ -119,7 +128,7 @@
       </div>
     </div>
     <div class="container"><!-- Page-Content -->
-      <div class="flex-grid flex-grid--padding-top flex-grid--padding-sides">
+      <div class="flex-grid flex-grid--padding-top">
         <div class="col col--space-sides">
           <h2> Home</h2>
           <p> </p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
@@ -139,6 +148,11 @@
                   <div class="col">
                   </div>
                   <div>I´m the footer</div>
+                  <div class="footer__social">
+                    <svg class="icon-facebook" role="presentation">
+                      <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>

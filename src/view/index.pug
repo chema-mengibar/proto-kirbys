@@ -2,7 +2,7 @@ doctype html
 html( lang= INDEX.lang )
   head
     meta(charset= INDEX.charset)
-    meta(http-equiv='X-UA-Compatible',content='IE=edge' )
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1' )
     meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
     meta(name='description', content= INDEX.description )
     meta(name='author', content= INDEX.author)
@@ -11,6 +11,8 @@ html( lang= INDEX.lang )
     link(href= 'assets/css/view.css', rel='stylesheet')
     block head
   body
+    //- todo: replace this in php
+    include ../assets/images/icons.svg
     block content
     script(src='assets/js/index.js')
     block customScript

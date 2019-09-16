@@ -1,4 +1,5 @@
 include ../grid/grid
+include ../icon/icon
 
 mixin footer( )
   div.footer
@@ -7,4 +8,6 @@ mixin footer( )
           +row
             +col
             div #{FOOTER.test}
+            div.footer__social
+              +icon('facebook')
      

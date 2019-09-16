@@ -20,20 +20,36 @@
 }
 
 .header__bg-image-wrapper{
-  height:auto;
-  overflow:hidden;
+  display:block;
+  width:100%;
+  height: auto;
+  -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  z-index:-1;
   position:absolute;
   top:0;
   left:0;
-  z-index:-1;
 
-  img{
-    height: auto;
-    width: 100%;
-    object-fit: cover;
-    max-width: 100%;
-  }
 }
+// .header__bg-image-wrapper{
+//   height:auto;
+//   overflow:hidden;
+//   position:absolute;
+//   top:0;
+//   left:0;
+//   z-index:-1;
+
+//   img{
+//     height: auto;
+//     width: 100%;
+//     object-fit: cover;
+//     max-width: 100%;
+//   }
+// }
 
 .header__slogan-wrapper{
   position: absolute;

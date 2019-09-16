@@ -34,10 +34,10 @@
     margin: 20px 0;
   }
 
-  &.flex-grid--padding-sides{
-    padding-left:20px;
-    padding-right:20px;
-  }
+  // &.flex-grid--padding-sides{
+  //   padding-left:20px;
+  //   padding-right:20px;
+  // }
 
   @media (max-width: 400px) {
     flex-direction:column;
@@ -75,8 +75,14 @@
 
     &.col--slogan{
       text-align: center;
-      padding-left:80px;
-      padding-right:100px;
+
+      padding-left: 20px;
+      padding-right: 20px;
+
+      @include tablet {
+        padding-left:80px;
+        padding-right:80px;
+      }
     }
   }
   
