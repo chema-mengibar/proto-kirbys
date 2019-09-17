@@ -12,7 +12,8 @@ html( lang= INDEX.lang )
     block head
   body
     //- todo: replace this in php
-    include ../assets/images/icons.svg
+    div(style='display:none;')
+      include ../assets/images/icons.svg
     block content
     script(src='assets/js/index.js')
     block customScript

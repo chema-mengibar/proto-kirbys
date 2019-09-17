@@ -42,19 +42,27 @@
 		"linkHref": "#"
 	},
 	"FOOTER": {
-		"test": "I´m the footer",
+		"copyright": "Lorem ipsum copyright 2019",
+		"contact": "Kontakt",
 		"social": [
 			{
-				"name": "",
-				"icon": "",
+				"name": "facebook",
+				"icon": "facebook",
 				"link": ""
 			},
 			{
-				"name": "",
-				"icon": "",
+				"name": "instagram",
+				"icon": "instagram",
+				"link": ""
+			},
+			{
+				"name": "email",
+				"icon": "email",
 				"link": ""
 			}
 		],
+		"linksHeadline": "Lorem ipsum",
+		"linksText": "Lorem ipsum temporavit desidera meteora apso et.",
 		"links": [
 			{
 				"label": "",

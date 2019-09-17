@@ -4,9 +4,10 @@
 .footer{
   width:100%;
   min-height: 100px;
-  padding: 10px;
+  padding: 20px;
   background-color:rgb(53, 53, 53);
   color:white;
+  font-size:12px;
 
   @include tablet {
    
@@ -20,14 +21,62 @@
   }
 }
 
+.footer__title{
+  text-transform: uppercase;
+}
+
+.footer__p{
+  font-size: 10px;
+  font-style: italic;
+}
+
+.footer__separation{
+  border-top:1px solid rgba(white,.2);
+  margin-top:10px;
+  padding-top:10px;
+}
+
+.footer__copyright{
+  text-align: right;
+  font-size:9px;
+}
+
+
+
 .footer__social{
+  display:inline-block;
   width:30px;
   height:30px;
   margin-top:10px;
+  border-radius: 15px;
+  
+  &:not(:last-of-type){
+    margin-right:5px;
+  }
+
   // background:transparent;
   svg{
     width:100%;
     height:100%;
     fill:white;
+  }
+
+  &--facebook{
+
+  }
+
+  &--instagram{
+
+  }
+
+  &--email{
+   text-align: center;
+    background-color: white;
+    
+    svg{
+      width:18px;
+      height:30px;
+      fill:rgb(53, 53, 53);
+    }
   }
 }

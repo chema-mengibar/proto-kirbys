@@ -5,9 +5,20 @@ mixin footer( )
   div.footer
      div.footer__content-wrapper 
       +container
-          +row
+          +row-with-sidebar-reverse
             +col
-            div #{FOOTER.test}
-            div.footer__social
-              +icon('facebook')
+              div.footer__title #{FOOTER.contact}
+              div.footer__social.footer__social--facebook
+                +icon('facebook')
+              div.footer__social.footer__social--instagram
+                +icon('instagram')
+              div.footer__social.footer__social--email
+                +icon('email')
+          
+            +col
+              div.footer__title #{FOOTER.linksHeadline}
+              div.footer__p #{FOOTER.linksText}
+          +row.footer__separation
+            +col
+              div.footer__copyright #{FOOTER.copyright}
      
