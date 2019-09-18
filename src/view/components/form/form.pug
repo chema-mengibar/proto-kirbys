@@ -1,0 +1,27 @@
+
+mixin inputText( obj )
+  - var requiredClass = obj.required ? 'form-row--required': ''
+  - var errorClass = obj.error ? 'error': ''
+  div.form-row( class=[requiredClass,errorClass].join(' ') )
+    label( for=obj.id)= obj.label
+    input( 
+      type=obj.type 
+      id=obj.id  
+      name=obj.name 
+      required=obj.required 
+      placeholder=obj.placeholder
+    )
+    if obj.error
+      div.error-message= obj.errorMessage
+
+mixin button( obj )
+  div.form-row
+    button(disabled=obj.disabled )=obj.text
+
+mixin form
+  form
+    each fieldObj, index in FORM.fields
+      if fieldObj.type == 'text' || fieldObj.type == 'email'
+        +inputText(fieldObj)
+    +button(FORM.button)
+

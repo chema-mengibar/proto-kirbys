@@ -1,0 +1,95 @@
+
+$inputHeight: 30px;
+$inputBorder: 1px solid rgb(194, 194, 194);
+$inputColor: #888;
+
+form{
+  border:1px dotted rgb(177, 177, 177);
+  padding:10px;
+  font-size: 12px;
+}
+
+.form-row{
+   
+  &:not(:last-child){
+    margin-bottom:12px;
+  }
+
+  label{
+    display:block;
+    width:100%;
+    margin-bottom:5px;
+    color: rgb(138, 138, 138);
+  }
+
+  input{
+    width:100%;
+    height: $inputHeight;
+    border: $inputBorder;
+    padding:0 10px;
+    color: $inputColor;
+  }
+
+  button{
+    height:30px;
+    min-width:100px;
+    background-color: #000;
+    color:white;
+    border:none;
+    cursor:pointer;
+
+    &:disabled{
+      background-color: rgb(146, 146, 146);
+    }
+  }
+
+  .error-message{
+    color:red;
+    font-size: .85em;
+    margin-top:5px;
+    text-align: left;
+  }
+
+  &.form-row--required{
+    label{
+      &:after{
+        content:' *';
+        font-size: .85em;
+      }
+    }
+  }
+
+  &.error{
+    label{
+      color:red;
+    }
+
+    input{
+      border: 1px solid red;
+    }
+  }
+
+
+}
+
+
+button:focus, textarea:focus, input:focus{
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+input{
+  box-shadow : none;  
+  -webkit-appearance: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color:  $inputColor !important;
+}
+
+:-webkit-autofill { color: #fff !important; }

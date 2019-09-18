@@ -1,0 +1,42 @@
+{
+  "FORM":{
+    "fields":[
+      {
+        "type":"text",
+        "id":"name",
+        "label":"Name",
+        "name":"name",
+        "errorMessage":"Bitte geben Sie ein gültiger Name",
+        "required":true,
+        "placeholder":"Name",
+        "error":true
+      },
+      {
+        "type":"text",
+        "id":"vorname",
+        "label":"Vorname",
+        "name":"vorname",
+        "errorMessage":"Bitte geben Sie ein gültiger Name",
+        "required":true,
+        "placeholder":"Vorname",
+        "error":false
+      },
+      {
+        "type":"email",
+        "id":"email",
+        "label":"Email adresse",
+        "name":"email",
+        "errorMessage":"Bitte geben Sie eine gültiger Emailadresse",
+        "required":true,
+        "placeholder":"Ihre Emailadresse",
+        "error":true
+      }
+    ],
+    "button":{
+      "text":"Senden",
+      "disabled": false
+    },
+    "action":""
+
+  }
+}

@@ -2,6 +2,7 @@ extends ../index
 include ../components/grid/grid
 include ../components/header/header
 include ../components/footer/footer
+include ../components/form/form
 include ../components/box-3/box-3
 include ../components/box-teaser/box-teaser
 
@@ -9,61 +10,69 @@ block append head
   // Nothing to append
 
 block content
-  <!-- Header -->
-  +container-full
-    +row
-      +col
-        +header
+  //- <!-- Header -->
+  //- +container-full
+  //-   +row
+  //-     +col
+  //-       +header
+
   <!-- Content -->
   +container
     <!-- Page-Content -->
-    +row_space-top
-      +col_space
-        h1  Home
-        p 
-        | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
-        | <br />
-        | <br />
-        | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
-        | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
+    //- +row_space-top
+    //-   +col_space
+    //-     h1  Home
+    //-     p 
+    //-     | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
+    //-     | <br />
+    //-     | <br />
+    //-     | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
+    //-     | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
+    //-     h2  Ergo onsectetur adipisicing
+    //-     p 
+    //-     | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
     
-        h2  Ergo onsectetur adipisicing
-        p 
-        | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
     <!-- Link Boxes -->
     +row_space-top
-      +box-3( BOX_3[0] )
-      +box-3( BOX_3[1] )
-      +box-3( BOX_3[2] )
-    <!-- Slogan -->
-    +row_space-top
-      +col_slogan
-        h2  Lorem ipsum temporavit
-        p 
-        | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
-        a(href='#') Mehr infos
-  <!-- Teaser -->
-  +container-full
-    +row_space-top
-      +col
-        +box-teaser( BOX_TEASER )
-
-  +container
-    <!-- Page-Content -->
-    +row_space-top
       +col_space
-        h2  Home
-        p 
-        | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
-        | <br />
-        | <br />
-        | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
+        +form
+    
+    //- <!-- Link Boxes -->
+    //- +row_space-top
+    //-   +box-3( BOX_3[0] )
+    //-   +box-3( BOX_3[1] )
+    //-   +box-3( BOX_3[2] )
+
+    //- <!-- Slogan -->
+    //- +row_space-top
+    //-   +col_slogan
+    //-     h2  Lorem ipsum temporavit
+    //-     p 
+    //-     | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
+    //-     a(href='#') Mehr infos
+  
+  //- <!-- Teaser -->
+  //- +container-full
+  //-   +row_space-top
+  //-     +col
+  //-       +box-teaser( BOX_TEASER )
+
+  //- +container
+  //-   <!-- Page-Content -->
+  //-   +row_space-top
+  //-     +col_space
+  //-       h2  Home
+  //-       p 
+  //-       | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
+  //-       | <br />
+  //-       | <br />
+  //-       | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
         
-  <!-- Footer -->
-  +container-full
-    +row
-      +col
-        +footer
+  //- <!-- Footer -->
+  //- +container-full
+  //-   +row
+  //-     +col
+  //-       +footer
 
 
   
