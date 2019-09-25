@@ -2,45 +2,22 @@
 $inputHeight: 30px;
 $inputBorder: 1px solid rgb(194, 194, 194);
 $inputColor: #888;
+$inputFontFamily: 'Text';
+$inputFontSize: 12px;
 
 form{
-  border:1px dotted rgb(177, 177, 177);
-  padding:10px;
+  // padding:10px;
   font-size: 12px;
+  margin: 20px 0;
 }
 
 .form-row{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
    
   &:not(:last-child){
     margin-bottom:12px;
-  }
-
-  label{
-    display:block;
-    width:100%;
-    margin-bottom:5px;
-    color: rgb(138, 138, 138);
-  }
-
-  input{
-    width:100%;
-    height: $inputHeight;
-    border: $inputBorder;
-    padding:0 10px;
-    color: $inputColor;
-  }
-
-  button{
-    height:30px;
-    min-width:100px;
-    background-color: #000;
-    color:white;
-    border:none;
-    cursor:pointer;
-
-    &:disabled{
-      background-color: rgb(146, 146, 146);
-    }
   }
 
   .error-message{
@@ -59,17 +36,87 @@ form{
     }
   }
 
-  &.error{
-    label{
-      color:red;
-    }
-
-    input{
-      border: 1px solid red;
-    }
+  &.form-row--inlined{
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
+  //- Use this block in want to control the error from row element with JS
+  // &.error{
+  //   label{
+  //     color:red;
+  //   }
+  //   input{
+  //     border: 1px solid red;
+  //   }
+  // }
+}
 
+.checkbox-item{
+  margin-left:10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  label{
+    margin: 0 10px 0 5px;
+    min-width:50px;
+  }
+}
+
+label{
+  display:block;
+  width:100%;
+  margin-bottom:5px;
+  color: rgb(138, 138, 138);
+
+}
+
+input[type="text"], input[type="email"]{
+  width:100%;
+  height: $inputHeight;
+  border: $inputBorder;
+  padding:0 10px;
+  color: $inputColor;
+  font-family: $inputFontFamily;
+  font-size: $inputFontSize;
+}
+
+input[type="checkbox"]{
+  display: inline;
+  width:20px;
+  height: $inputHeight;
+  border: $inputBorder;
+  padding:0 10px;
+  color: $inputColor;
+}
+
+textarea{
+  width: 100%;
+  color: $inputColor;
+  border: $inputBorder;
+  padding: 10px 10px;
+  font-family: $inputFontFamily;
+  font-size: $inputFontSize;
+}
+
+button,
+input[type="submit"],
+.button-submit {
+  height:30px;
+  min-width:100px;
+  width:auto;
+  background-color: #000;
+  color:white;
+  border:none;
+  cursor:pointer;
+  align-self: flex-end;
+  text-align: center;
+  line-height: 30px;
+
+  &:disabled{
+    background-color: rgb(146, 146, 146);
+  }
 }
 
 
@@ -79,15 +126,33 @@ button:focus, textarea:focus, input:focus{
   box-shadow: none;
 }
 
-input{
+textarea, input[type="text"],input[type="email"]{
   box-shadow : none;  
   -webkit-appearance: none;
+
+  &:not(:placeholder-shown):required:valid{
+    border: $inputBorder;
+  }
+
+  &:valid{
+    border: $inputBorder;
+  }
+
+  &:not(:placeholder-shown):required:invalid{
+    border: 1px solid red;
+  }
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active  {
+input[type="text"]:-webkit-autofill,
+input[type="text"]:-webkit-autofill:hover, 
+input[type="text"]:-webkit-autofill:focus, 
+input[type="text"]:-webkit-autofill:active,
+
+input[type="email"]:-webkit-autofill,
+input[type="email"]:-webkit-autofill:hover, 
+input[type="email"]:-webkit-autofill:focus, 
+input[type="email"]:-webkit-autofill:active
+{
   -webkit-box-shadow: 0 0 0 30px white inset !important;
   -webkit-text-fill-color:  $inputColor !important;
 }

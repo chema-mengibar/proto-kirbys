@@ -9,7 +9,7 @@
         "errorMessage":"Bitte geben Sie ein gültiger Name",
         "required":true,
         "placeholder":"Name",
-        "error":true
+        "error":false
       },
       {
         "type":"text",
@@ -29,7 +29,31 @@
         "errorMessage":"Bitte geben Sie eine gültiger Emailadresse",
         "required":true,
         "placeholder":"Ihre Emailadresse",
-        "error":true
+        "error":false
+      },
+      {
+        "type":"checkbox",
+        "id":"vehicle",
+        "label":"Autos",
+        "name":"vehicle",
+        "errorMessage":"Bitte geben Sie eine gültiger vehicle",
+        "required":false,
+        "value":"Ja",
+        "error":false,
+        "values":[
+          {"label":"Ja","value":"1"},
+          {"label":"Nein","value":"0"}
+        ]
+      },
+      {
+        "type":"textarea",
+        "id":"comment",
+        "label":"Your comment",
+        "name":"comment",
+        "errorMessage":"Bitte geben Sie eine gültiger Kommentar",
+        "required":false,
+        "placeholder":"Ihre Kommentar",
+        "error":false
       }
     ],
     "button":{

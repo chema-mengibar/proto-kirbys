@@ -1,3 +1,21 @@
+mixin checkbox( obj )
+  - var requiredClass = obj.required ? 'form-row--required': ''
+  - var errorClass = obj.error ? 'error': ''
+  div.form-row.form-row--inlined( class=[requiredClass,errorClass].join(' ') )
+    label=obj.label
+    each item, index in obj.values
+      - var idFor = obj.id + '_' +  index
+      div.checkbox-item
+        input( 
+          type='checkbox' 
+          id=(idFor)  
+          name=obj.name 
+          required=obj.required 
+          value=item.value
+        )
+        label.checkbox-label( for=idFor )= item.label
+    if obj.error
+      div.error-message= obj.errorMessage
 
 mixin inputText( obj )
   - var requiredClass = obj.required ? 'form-row--required': ''
@@ -14,14 +32,41 @@ mixin inputText( obj )
     if obj.error
       div.error-message= obj.errorMessage
 
+
+mixin textArea( obj )
+  - var requiredClass = obj.required ? 'form-row--required': ''
+  - var errorClass = obj.error ? 'error': ''
+  div.form-row( class=[requiredClass,errorClass].join(' ') )
+    label( for=obj.id)= obj.label
+    textarea( 
+      id=obj.id  
+      name=obj.name 
+      required=obj.required 
+      placeholder=obj.placeholder
+    )
+    if obj.error
+      div.error-message= obj.errorMessage
+
 mixin button( obj )
   div.form-row
-    button(disabled=obj.disabled )=obj.text
+    input(type="submit",name="sign_in", value=obj.text , disabled=obj.disabled, id="submit_form" )
+
+mixin divButton( obj )
+  //- HTML5 Form Validation triggered from JS
+  div.form-row
+    div.button-submit(id="submit_form" )=obj.text
 
 mixin form
-  form
+  form(id="login_form")
     each fieldObj, index in FORM.fields
       if fieldObj.type == 'text' || fieldObj.type == 'email'
         +inputText(fieldObj)
+      if fieldObj.type == 'checkbox'
+        +checkbox(fieldObj)
+      if fieldObj.type == 'textarea'
+        +textArea(fieldObj)
     +button(FORM.button)
+
+
+
 

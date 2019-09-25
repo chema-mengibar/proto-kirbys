@@ -41,6 +41,75 @@
 		"link": "Mehr infos",
 		"linkHref": "#"
 	},
+	"FORM": {
+		"fields": [
+			{
+				"type": "text",
+				"id": "name",
+				"label": "Name",
+				"name": "name",
+				"errorMessage": "Bitte geben Sie ein gültiger Name",
+				"required": true,
+				"placeholder": "Name",
+				"error": false
+			},
+			{
+				"type": "text",
+				"id": "vorname",
+				"label": "Vorname",
+				"name": "vorname",
+				"errorMessage": "Bitte geben Sie ein gültiger Name",
+				"required": true,
+				"placeholder": "Vorname",
+				"error": false
+			},
+			{
+				"type": "email",
+				"id": "email",
+				"label": "Email adresse",
+				"name": "email",
+				"errorMessage": "Bitte geben Sie eine gültiger Emailadresse",
+				"required": true,
+				"placeholder": "Ihre Emailadresse",
+				"error": false
+			},
+			{
+				"type": "checkbox",
+				"id": "vehicle",
+				"label": "Autos",
+				"name": "vehicle",
+				"errorMessage": "Bitte geben Sie eine gültiger vehicle",
+				"required": false,
+				"value": "Ja",
+				"error": false,
+				"values": [
+					{
+						"label": "Ja",
+						"value": "1"
+					},
+					{
+						"label": "Nein",
+						"value": "0"
+					}
+				]
+			},
+			{
+				"type": "textarea",
+				"id": "comment",
+				"label": "Your comment",
+				"name": "comment",
+				"errorMessage": "Bitte geben Sie eine gültiger Kommentar",
+				"required": false,
+				"placeholder": "Ihre Kommentar",
+				"error": false
+			}
+		],
+		"button": {
+			"text": "Senden",
+			"disabled": false
+		},
+		"action": ""
+	},
 	"FOOTER": {
 		"copyright": "Lorem ipsum copyright 2019",
 		"contact": "Kontakt",
@@ -69,45 +138,6 @@
 				"href": ""
 			}
 		]
-	},
-	"FORM": {
-		"fields": [
-			{
-				"type": "text",
-				"id": "name",
-				"label": "Name",
-				"name": "name",
-				"errorMessage": "Bitte geben Sie ein gültiger Name",
-				"required": true,
-				"placeholder": "Name",
-				"error": true
-			},
-			{
-				"type": "text",
-				"id": "vorname",
-				"label": "Vorname",
-				"name": "vorname",
-				"errorMessage": "Bitte geben Sie ein gültiger Name",
-				"required": true,
-				"placeholder": "Vorname",
-				"error": false
-			},
-			{
-				"type": "email",
-				"id": "email",
-				"label": "Email adresse",
-				"name": "email",
-				"errorMessage": "Bitte geben Sie eine gültiger Emailadresse",
-				"required": true,
-				"placeholder": "Ihre Emailadresse",
-				"error": true
-			}
-		],
-		"button": {
-			"text": "Senden",
-			"disabled": false
-		},
-		"action": ""
 	},
 	"HEADER": {
 		"bgImage": {
