@@ -1,3 +1,33 @@
+# HOW CLONE THIS REPO (For new projects.)
+
+Clone the repo and remove the whole history for the new repository.  
+Choose one mode and  
+replace the value-string in commands:
+
+- {FOLDER_NAME} : myNewSite
+- {NEW_REMOTE_REPO}: https://github.com/user-name/my-new-site.git
+
+### Mode 1  
+```
+git clone https://github.com/chema-mengibar/proto-kirbys.git {FOLDER_NAME} --depth 1
+cd {FOLDER_NAME}
+git remote rm origin
+git remote add origin {NEW_REMOTE_REPO}
+```
+
+### Mode 2  
+```
+git clone https://github.com/chema-mengibar/proto-kirbys.git {FOLDER_NAME} --depth 1
+cd {FOLDER_NAME}
+rm -rf .git
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin {NEW_REMOTE_REPO}
+git push -u --force origin master
+```
+
+
 # INSTALLATION
 ```
 npm i
