@@ -1,11 +1,11 @@
 # HOW CLONE THIS REPO (For new projects.)
-
-Clone the repo and remove the whole history for the new repository.  
-Choose one mode and  
-replace the value-string in commands:
-
-- {FOLDER_NAME} : myNewSite
-- {NEW_REMOTE_REPO}: https://github.com/user-name/my-new-site.git
+**!!! Remove this block in the readme after clone the repository for a new project !!!**  
+The steps show how to clone the repo and remove the whole git history for the new repo.  
+1. Choose one mode and  
+2. replace the value-string in commands:
+  - {FOLDER_NAME} : myNewSite
+  - {NEW_REMOTE_REPO}: https://github.com/user-name/my-new-site.git
+3. Run the commands in terminal
 
 ### Mode 1  
 ```
@@ -81,7 +81,7 @@ include ../assets/images/icons.svg
 Use the mixin Icon to add css-customizable svg-icons to the site.
 `\src\view\components\icon\icon.pug`
 
-## More Icons
+#### Do you need more Icons?
 - https://www.flaticon.com/
 
 ## Reads
