@@ -16,7 +16,9 @@ var concat = require('gulp-concat');
 var fs = require('fs');
 var pkg = require('../package.json');
 var combine = require('gulp-scss-combine');
+var replace = require('gulp-replace');
 
+require('dotenv').config();
 // #######################################################################################  TASKS
 
 /*------------------------------------------------------------------------------------- Task copyHtml
@@ -67,11 +69,22 @@ gulp.task( 'pug:build', ['pug:data'], function buildHTML( ) {
 
 
 function buildFile( filePrefix ){
+  // Pass enviroment variables to pug
+  let configData = {
+    CONFIG:{
+      mode: process.env.BUILD_CONTENT
+    }
+  };
+  let jsonFilesData = JSON.parse(fs.readFileSync('./src/view/temp/temp-data.json'))
+  let objMerged = { ...configData, ...jsonFilesData };
+
   gulp.src('./src/view/pages/' + filePrefix +'.page.pug')
   .pipe(pug({
-    data:  JSON.parse(fs.readFileSync('./src/view/temp/temp-data.json')),
+    data: objMerged ,
     pretty: true
   }))
+  .pipe(replace('&lt;', '<'))
+  .pipe(replace('&gt;', '>'))
   .pipe( rename( filePrefix + '.html' ) )
   .pipe( gulp.dest( 'dist-pages' ) );
 }

@@ -6,6 +6,9 @@
     "author": "Motuo",
     "description": "",
     "charset": "utf-8",
-    "pageTitle": "Hello World"
+    "pageTitle": {
+      "CMS": "<?= $site->title() ?> | <?= $page->title() ?>",
+      "PUG": "Proto Kirbys"
+    } 
   }
 }

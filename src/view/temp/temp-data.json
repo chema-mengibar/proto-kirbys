@@ -6,40 +6,117 @@
 		"author": "Motuo",
 		"description": "",
 		"charset": "utf-8",
-		"pageTitle": "Hello World"
+		"pageTitle": {
+			"CMS": "<?= $site->title() ?> | <?= $page->title() ?>",
+			"PUG": "Proto Kirbys"
+		}
 	},
 	"HOME": {
-		"salutation": "Guten Tag"
+		"PUG": {
+			"salutation": "Guten Tag"
+		},
+		"CMS": {
+			"textIntro": "<?= $page->home__text() ?>",
+			"slogan__headline": "<?= $page->slogan__headline() ?>",
+			"slogan__text": "<?= $page->slogan__text() ?>",
+			"slogan__href": "<?= $page->slogan__href() ?>",
+			"slogan__link": "<?= $page->slogan__link() ?>"
+		}
 	},
 	"BOX_3": [
 		{
-			"imgSrc": "./assets/images/placeholders/ph_864x486.jpg",
-			"headline": "",
-			"text": "Lorem ipsum temporavit desidera meteora.",
-			"link": "Mehr infos",
-			"linkHref": "#"
+			"PUG": {
+				"imgSrc": "./assets/images/placeholders/ph_864x486.jpg",
+				"headline": "Teaser",
+				"text": "Lorem ipsum temporavit desidera meteora.",
+				"link": "Mehr infos",
+				"linkHref": "#"
+			},
+			"CMS": {
+				"imgSrc": "<?= $page->box_teaser__imgSrc() ?>",
+				"headline": "<?= markdown($page->box_teaser__headline()) ?>",
+				"text": "<?= markdown($page->box_teaser__text()) ?>",
+				"link": "<?= $page->box_teaser__link() ?>",
+				"linkHref": "<?= $page->box_teaser__linkHref() ?>"
+			}
 		},
 		{
-			"imgSrc": "./assets/images/placeholders/ph_864x486.jpg",
-			"headline": "",
-			"text": "Lorem ipsum temporavit desidera meteora.",
-			"link": "Mehr infos",
-			"linkHref": "#"
+			"PUG": {
+				"imgSrc": "./assets/images/placeholders/ph_864x486.jpg",
+				"headline": "Teaser",
+				"text": "Lorem ipsum temporavit desidera meteora.",
+				"link": "Mehr infos",
+				"linkHref": "#"
+			},
+			"CMS": {
+				"imgSrc": "<?= $page->box_teaser__imgSrc() ?>",
+				"headline": "<?= markdown($page->box_teaser__headline()) ?>",
+				"text": "<?= markdown($page->box_teaser__text()) ?>",
+				"link": "<?= $page->box_teaser__link() ?>",
+				"linkHref": "<?= $page->box_teaser__linkHref() ?>"
+			}
 		},
 		{
-			"imgSrc": "./assets/images/placeholders/ph_864x486.jpg",
-			"headline": "",
-			"text": "Lorem ipsum temporavit desidera meteora.",
-			"link": "Mehr infos",
-			"linkHref": "#"
+			"PUG": {
+				"imgSrc": "./assets/images/placeholders/ph_864x486.jpg",
+				"headline": "Teaser",
+				"text": "Lorem ipsum temporavit desidera meteora.",
+				"link": "Mehr infos",
+				"linkHref": "#"
+			},
+			"CMS": {
+				"imgSrc": "<?= $page->box_teaser__imgSrc() ?>",
+				"headline": "<?= markdown($page->box_teaser__headline()) ?>",
+				"text": "<?= markdown($page->box_teaser__text()) ?>",
+				"link": "<?= $page->box_teaser__link() ?>",
+				"linkHref": "<?= $page->box_teaser__linkHref() ?>"
+			}
 		}
 	],
 	"BOX_TEASER": {
-		"imgSrc": "./assets/images/placeholders/ph_864x864.jpg",
-		"headline": "Teaser",
-		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi urna orci, ultrices et porta ac, lacinia vitae nisl. Vestibulum sit amet lorem vulputate, cursus orci in, condimentum sapien. Duis placerat risus quis urna facilisis, vel cursus purus porta. Nam luctus lorem elit, quis placerat neque porta porttitor.",
-		"link": "Mehr infos",
-		"linkHref": "#"
+		"PUG": {
+			"imgSrc": "./assets/images/placeholders/ph_864x864.jpg",
+			"headline": "Teaser",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi urna orci, ultrices et porta ac, lacinia vitae nisl. Vestibulum sit amet lorem vulputate, cursus orci in, condimentum sapien. Duis placerat risus quis urna facilisis, vel cursus purus porta. Nam luctus lorem elit, quis placerat neque porta porttitor.",
+			"link": "Mehr infos",
+			"linkHref": "#"
+		},
+		"CMS": {
+			"imgSrc": "<?= $page->box_teaser__imgSrc() ?>",
+			"headline": "<?= markdown($page->box_teaser__headline()) ?>",
+			"text": "<?= markdown($page->box_teaser__text()) ?>",
+			"link": "<?= $page->box_teaser__link() ?>",
+			"linkHref": "<?= $page->box_teaser__linkHref() ?>"
+		}
+	},
+	"FOOTER": {
+		"copyright": "Lorem ipsum copyright 2019",
+		"contact": "Kontakt",
+		"social": [
+			{
+				"name": "facebook",
+				"icon": "facebook",
+				"link": ""
+			},
+			{
+				"name": "instagram",
+				"icon": "instagram",
+				"link": ""
+			},
+			{
+				"name": "email",
+				"icon": "email",
+				"link": ""
+			}
+		],
+		"linksHeadline": "Lorem ipsum",
+		"linksText": "Lorem ipsum temporavit desidera meteora apso et.",
+		"links": [
+			{
+				"label": "",
+				"href": ""
+			}
+		]
 	},
 	"FORM": {
 		"fields": [
@@ -109,35 +186,6 @@
 			"disabled": false
 		},
 		"action": ""
-	},
-	"FOOTER": {
-		"copyright": "Lorem ipsum copyright 2019",
-		"contact": "Kontakt",
-		"social": [
-			{
-				"name": "facebook",
-				"icon": "facebook",
-				"link": ""
-			},
-			{
-				"name": "instagram",
-				"icon": "instagram",
-				"link": ""
-			},
-			{
-				"name": "email",
-				"icon": "email",
-				"link": ""
-			}
-		],
-		"linksHeadline": "Lorem ipsum",
-		"linksText": "Lorem ipsum temporavit desidera meteora apso et.",
-		"links": [
-			{
-				"label": "",
-				"href": ""
-			}
-		]
 	},
 	"HEADER": {
 		"bgImage": {

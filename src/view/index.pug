@@ -1,3 +1,4 @@
+//@cursor:snippet:header:start
 doctype html
 html( lang= INDEX.lang )
   head
@@ -6,7 +7,7 @@ html( lang= INDEX.lang )
     meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
     meta(name='description', content= INDEX.description )
     meta(name='author', content= INDEX.author)
-    title= INDEX.pageTitle
+    title= INDEX.pageTitle[CONFIG.mode]
     link(href= 'assets/css/index.css', rel='stylesheet')
     link(href= 'assets/css/view.css', rel='stylesheet')
     block head
@@ -17,3 +18,4 @@ html( lang= INDEX.lang )
     block content
     script(src='assets/js/index.js')
     block customScript
+//@cursor:snippet:footer:end

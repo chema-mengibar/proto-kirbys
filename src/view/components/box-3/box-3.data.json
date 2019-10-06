@@ -1,25 +1,53 @@
 {
   "BOX_3":[
     {
-      "imgSrc":"./assets/images/placeholders/ph_864x486.jpg",
-      "headline":"",
-      "text":"Lorem ipsum temporavit desidera meteora.",
-      "link":"Mehr infos",
-      "linkHref":"#"
+      "PUG":{
+        "imgSrc":"./assets/images/placeholders/ph_864x486.jpg",
+        "headline":"Teaser",
+        "text":"Lorem ipsum temporavit desidera meteora.",
+        "link":"Mehr infos",
+        "linkHref":"#"
+      },
+      "CMS":{
+        "imgSrc":"<?= $page->box_teaser__imgSrc() ?>",
+        "headline":"<?= markdown($page->box_teaser__headline()) ?>",
+        "text":"<?= markdown($page->box_teaser__text()) ?>",
+        "link":"<?= $page->box_teaser__link() ?>",
+        "linkHref":"<?= $page->box_teaser__linkHref() ?>"
+      }
     },
     {
-      "imgSrc":"./assets/images/placeholders/ph_864x486.jpg",
-      "headline":"",
-      "text":"Lorem ipsum temporavit desidera meteora.",
-      "link":"Mehr infos",
-      "linkHref":"#"
+      "PUG":{
+        "imgSrc":"./assets/images/placeholders/ph_864x486.jpg",
+        "headline":"Teaser",
+        "text":"Lorem ipsum temporavit desidera meteora.",
+        "link":"Mehr infos",
+        "linkHref":"#"
+      },
+      "CMS":{
+        "imgSrc":"<?= $page->box_teaser__imgSrc() ?>",
+        "headline":"<?= markdown($page->box_teaser__headline()) ?>",
+        "text":"<?= markdown($page->box_teaser__text()) ?>",
+        "link":"<?= $page->box_teaser__link() ?>",
+        "linkHref":"<?= $page->box_teaser__linkHref() ?>"
+      }
     },
     {
-      "imgSrc":"./assets/images/placeholders/ph_864x486.jpg",
-      "headline":"",
-      "text":"Lorem ipsum temporavit desidera meteora.",
-      "link":"Mehr infos",
-      "linkHref":"#"
+      "PUG":{
+        "imgSrc":"./assets/images/placeholders/ph_864x486.jpg",
+        "headline":"Teaser",
+        "text":"Lorem ipsum temporavit desidera meteora.",
+        "link":"Mehr infos",
+        "linkHref":"#"
+      },
+      "CMS":{
+        "imgSrc":"<?= $page->box_teaser__imgSrc() ?>",
+        "headline":"<?= markdown($page->box_teaser__headline()) ?>",
+        "text":"<?= markdown($page->box_teaser__text()) ?>",
+        "link":"<?= $page->box_teaser__link() ?>",
+        "linkHref":"<?= $page->box_teaser__linkHref() ?>"
+      }
     }
+   
   ]
 }

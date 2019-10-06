@@ -1,0 +1,39 @@
+extends ../index
+include ../components/grid/grid
+include ../components/header/header
+include ../components/footer/footer
+include ../components/form/form
+include ../components/box-3/box-3
+include ../components/box-teaser/box-teaser
+
+
+block append head
+  // Nothing to append
+
+block content
+  <!-- Header -->
+  +container-full
+    +row
+      +col
+        +header
+
+  <!-- Content -->
+  +container
+    <!-- ________________________________________________________ SNIPPET-HEADER:END -->
+   
+  <!-- ________________________________________________________ SNIPPET-FOOTER:START -->
+  <!-- Footer -->
+  +container-full
+    +row
+      +col
+        +footer
+ 
+
+//- block customScript
+//-   script(async src= 'https://www.googletagmanager.com/')
+//-   script.
+//-     window.dataLayer = window.dataLayer || [];
+//-     function gtag(){ dataLayer.push(arguments); }
+//-     gtag('js', new Date());
+//-     gtag('config', 'UA-47226367-6');
+

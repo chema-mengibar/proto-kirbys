@@ -8,6 +8,11 @@
     src: url('../fonts/Cormorant_Garamond/CormorantGaramond-SemiBoldItalic.ttf') format('truetype');
 }
 
+
+$font-color: $black;
+$font-color--contrast: $white;
+
+
 //--------------------------------------------------------------------------
 
 h1{
@@ -48,8 +53,6 @@ p{
   line-height : 18px;
   letter-spacing: -0.02em;
   font-family: 'Text';
-
-
 }
 
 

@@ -1,5 +1,14 @@
 {
   "HOME": {
-    "salutation": "Guten Tag"
+    "PUG":{
+      "salutation": "Guten Tag"
+    },
+    "CMS":{
+      "textIntro": "<?= $page->home__text() ?>",
+      "slogan__headline":"<?= $page->slogan__headline() ?>",
+      "slogan__text":"<?= $page->slogan__text() ?>",
+      "slogan__href":"<?= $page->slogan__href() ?>",
+      "slogan__link":"<?= $page->slogan__link() ?>"
+    }
   }
 }

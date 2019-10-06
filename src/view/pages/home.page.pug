@@ -6,54 +6,64 @@ include ../components/form/form
 include ../components/box-3/box-3
 include ../components/box-teaser/box-teaser
 
+
 block append head
   // Nothing to append
 
 block content
-  <!-- Header -->
+  //Header
   +container-full
     +row
       +col
         +header
 
-  <!-- Content -->
+  //Content
   +container
-    <!-- Page-Content -->
+    //@cursor:snippet:header:end
+    //page-content
     +row_space-top
       +col_space
-        h1  Home
-        p 
-        | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
-        | <br /><br />
-        | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
-        | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
-        | <br /><br />
-        h2  Ergo onsectetur adipisicing
-        p 
-        | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
-    
-    <!-- Link Boxes -->
-    +row_space-top
-      +box-3( BOX_3[0] )
-      +box-3( BOX_3[1] )
-      +box-3( BOX_3[2] )
+        if( CONFIG.mode == 'PUG' )
+          h1  Home
+          p 
+          | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
+          | <br /><br />
+          | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
+          | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
+          | <br /><br />
+          h2  Ergo onsectetur adipisicing
+          p 
+          | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
+        if( CONFIG.mode == 'CMS' )
+          | #{HOME[CONFIG.mode].textIntro}
 
-    <!-- Slogan -->
+    //link-boxes
+    +row_space-top
+      +box-3( BOX_3[0][CONFIG.mode] )
+      +box-3( BOX_3[1][CONFIG.mode] )
+      +box-3( BOX_3[2][CONFIG.mode] )
+
+    //Slogan
     +row_space-top
       +col_slogan
-        h2  Lorem ipsum temporavit
-        p 
-        | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
-        a(href='#') Mehr infos
-  
-  <!-- Teaser -->
+        if( CONFIG.mode == 'PUG' )
+          h2  Lorem ipsum temporavit
+          p 
+          | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
+          a(href='#') Mehr infos
+        if( CONFIG.mode == 'CMS' )
+          h2 #{HOME[CONFIG.mode].slogan__headline}
+          p
+          | #{HOME[CONFIG.mode].slogan__text}
+          a(href=HOME[CONFIG.mode].slogan__href) #{HOME[CONFIG.mode].slogan__link}
+  //Teaser
   +container-full
     +row_space-top
       +col
-        +box-teaser( BOX_TEASER )
+        +box-teaser( BOX_TEASER[CONFIG.mode] )
 
   +container
-    <!-- Page-Content -->
+    //Page-content
     +row_space-top
       +col_space
         h2  Kontakt
@@ -68,15 +78,13 @@ block content
     +row
       +col_space
         
-
-  <!-- Footer -->
+  //@cursor:snippet:footer:start
+  //Footer
   +container-full
     +row
       +col
         +footer
-
-
-  
+ 
 
 block customScript
   script(async src= 'https://www.googletagmanager.com/')
@@ -85,3 +93,4 @@ block customScript
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'UA-47226367-6');
+
