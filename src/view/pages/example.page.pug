@@ -1,0 +1,18 @@
+extends ../templates/default
+include ../components/grid/grid
+include ../components/header/header
+include ../components/footer/footer
+include ../components/form/form
+include ../components/box-3/box-3
+include ../components/box-teaser/box-teaser
+
+block page
+  +container
+    //@cursor:snippet:header:end
+    //page-content
+    +row_space-top
+      +col_space
+        if( CONFIG.mode == 'PUG' )
+          h1  #{EXAMPLE.PUG.salutation}
+        if( CONFIG.mode == 'CMS' )
+          | #{HOME[CONFIG.mode].textIntro}

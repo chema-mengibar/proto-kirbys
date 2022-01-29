@@ -1,0 +1,29 @@
+extends ./index
+include ../components/grid/grid
+include ../components/header/header
+include ../components/footer/footer
+include ../components/form/form
+include ../components/box-3/box-3
+include ../components/box-teaser/box-teaser
+
+block append head
+  // Nothing to append
+
+block content
+  //Header
+  +container-full
+    +row
+      +col
+        +header
+  //Content
+  block page
+  //@cursor:snippet:footer:start
+  //Footer
+  +container-full
+    +row
+      +col
+        +footer
+
+block customScript
+  //- Nothing to do
+

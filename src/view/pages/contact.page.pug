@@ -1,0 +1,31 @@
+extends ../templates/default
+include ../components/grid/grid
+include ../components/header/header
+include ../components/footer/footer
+include ../components/form/form
+include ../components/box-3/box-3
+include ../components/box-teaser/box-teaser
+
+block page
+  +container
+    //@cursor:snippet:header:end
+    //page-content
+    +row_space-top
+      +col_space
+        if( CONFIG.mode == 'PUG' )
+          h1  #{CONTACT.PUG.salutation}
+          p 
+          | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
+          | <br /><br />
+          | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
+        if( CONFIG.mode == 'CMS' )
+          | #{CONTACT[CONFIG.mode].textIntro}
+    +row_space-top
+      +col_space
+        h2  Kontakt
+        p 
+        | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus blanditiis nostrum veniam architecto repudiandae ipsa. Iste hic at culpa id quia animi consequuntur accusantium, in distinctio dolores omnis. Provident, dolore?
+        | <br />
+        | <br />
+        | Lorem ipsum, dolor sit amet consectetur adipisicing?
+        +form 

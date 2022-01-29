@@ -1,7 +1,7 @@
 {
-  "HOME": {
+  "CONTACT": {
     "PUG":{
-      "salutation": "Home"
+      "salutation": "Kontakt"
     },
     "CMS":{
       "textIntro": "<?= $page->home__text() ?>",

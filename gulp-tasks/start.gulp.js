@@ -19,11 +19,12 @@ var pkg = require('../package.json');
 
 // #######################################################################################  TASKS
 
+gulp.task( 'images:move', function( ){
+  gulp.src([ './src/assets/images/**/*' ])
+  .pipe( gulp.dest( 'dist-pages/assets/images' ) );
+})
 
 gulp.task( 'assets:move', function( ){
-
-  gulp.src([ './src/assets/images/**/*' ])
-    .pipe( gulp.dest( 'dist-pages/assets/images' ) );
 
   // gulp.src([
   //   'node_modules/bootstrap-sass/assets/fonts/**/*',

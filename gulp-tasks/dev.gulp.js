@@ -61,7 +61,6 @@ gulp.task( 'pug:build', ['pug:data'], function buildHTML( ) {
   fs.readdir('./src/view/pages/', (err, files) => {
     files.filter( (file)=> file.indexOf('.pug') > -1).forEach(file => {
       var pageName = file.replace('.page.pug', '');
-      console.log( '>>>> PAGE created: ', pageName )
       buildFile(pageName)
     });
   });
@@ -87,6 +86,8 @@ function buildFile( filePrefix ){
   .pipe(replace('&gt;', '>'))
   .pipe( rename( filePrefix + '.html' ) )
   .pipe( gulp.dest( 'dist-pages' ) );
+
+  console.log( '>>>> PAGE created: ', filePrefix , 'Open in Browser >>> http://localhost:3000/' + filePrefix + '.html' )
 }
 
 function requireUncached( $module ) {

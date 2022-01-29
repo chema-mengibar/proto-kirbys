@@ -37,8 +37,8 @@ function extract_text(params) {
 gulp.task('cms:cut',function(){
 
   // Header Snippet
-  var filePrefix = 'header'
-  var targetFile = 'home.html'
+  var filePrefix = 'header';
+  var targetFile = 'example.html'; // << ------------------------- example.html @todo: change this?
   gulp.src(['./dist-pages/' + targetFile ])
   .pipe(extract_text({
     pattern_start : "<!--@cursor:snippet:header:start-->",
@@ -48,8 +48,8 @@ gulp.task('cms:cut',function(){
   .pipe(gulp.dest('dist-cms'))
 
   // Footer Snippet
-  var filePrefix = 'footer'
-  var targetFile = 'home.html'
+  var filePrefix = 'footer';
+  var targetFile = 'example.html'; // << ------------------------- example.html @todo: change this?
   gulp.src(['./dist-pages/' + targetFile ])
   .pipe(extract_text({
     pattern_start : "<!--@cursor:snippet:footer:start-->",

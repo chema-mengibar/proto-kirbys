@@ -1,16 +1,4 @@
 {
-	"INDEX": {
-		"lang": "de-DE",
-		"version": "1.0",
-		"date": "2017",
-		"author": "Motuo",
-		"description": "",
-		"charset": "utf-8",
-		"pageTitle": {
-			"CMS": "<?= $site->title() ?> | <?= $page->title() ?>",
-			"PUG": "Proto Kirbys"
-		}
-	},
 	"HOME": {
 		"PUG": {
 			"salutation": "Guten Tag"
@@ -21,6 +9,22 @@
 			"slogan__text": "<?= $page->slogan__text() ?>",
 			"slogan__href": "<?= $page->slogan__href() ?>",
 			"slogan__link": "<?= $page->slogan__link() ?>"
+		}
+	},
+	"DEFAULT": {
+		"PUG": {},
+		"CMS": {}
+	},
+	"INDEX": {
+		"lang": "de-DE",
+		"version": "1.0",
+		"date": "2017",
+		"author": "Motuo",
+		"description": "",
+		"charset": "utf-8",
+		"pageTitle": {
+			"CMS": "<?= $site->title() ?> | <?= $page->title() ?>",
+			"PUG": "Proto Kirbys"
 		}
 	},
 	"BOX_3": [
